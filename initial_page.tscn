@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://j18lm64q4u1j"]
+
+[ext_resource type="Script" uid="uid://ddoxin4d1qnx4" path="res://initial_page.gd" id="1_kdrrs"]
+[ext_resource type="Texture2D" uid="uid://cifqom1vdk14i" path="res://tiles/2 - Autumn Forest/Background parts/_Complete_static_BG_(288 x 208).png" id="1_o4l0v"]
+[ext_resource type="Texture2D" uid="uid://q4u0qm06dr5b" path="res://ui/logo.png" id="2_xmscy"]
+[ext_resource type="Texture2D" uid="uid://54kr3vn6o3tw" path="res://ui/milayrin.png" id="3_u4na4"]
+[ext_resource type="Texture2D" uid="uid://cu326oe8pcskh" path="res://player/1 - Penguin/Mini FX, Items & UI/Effects/Bright_Sparkle (16 x 16).png" id="4_u4na4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdrrs"]
+atlas = ExtResource("3_u4na4")
+region = Rect2(0, 331, 222, 266)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asgky"]
+atlas = ExtResource("3_u4na4")
+region = Rect2(229, 331, 222, 266)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulf3r"]
+atlas = ExtResource("3_u4na4")
+region = Rect2(458, 331, 222, 266)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_300mk"]
+atlas = ExtResource("3_u4na4")
+region = Rect2(687, 331, 222, 266)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_womsm"]
+atlas = ExtResource("3_u4na4")
+region = Rect2(0, 613, 222, 266)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yt87n"]
+atlas = ExtResource("3_u4na4")
+region = Rect2(229, 613, 222, 266)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuoyg"]
+atlas = ExtResource("3_u4na4")
+region = Rect2(458, 613, 222, 266)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_661jr"]
+atlas = ExtResource("3_u4na4")
+region = Rect2(687, 613, 222, 266)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkcga"]
+atlas = ExtResource("3_u4na4")
+region = Rect2(229, 49, 222, 266)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggde1"]
+atlas = ExtResource("3_u4na4")
+region = Rect2(458, 49, 222, 266)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkfjn"]
+atlas = ExtResource("3_u4na4")
+region = Rect2(687, 49, 222, 266)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u6864"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdrrs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_asgky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulf3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_300mk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_womsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yt87n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuoyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_661jr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkcga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggde1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkfjn")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="InitialPage" type="Control" unique_id=1236988615]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kdrrs")
+
+[node name="CompleteStaticBg(288X208)" type="Sprite2D" parent="." unique_id=279839104]
+position = Vector2(146, 80)
+scale = Vector2(1.3843039, 1.3843039)
+texture = ExtResource("1_o4l0v")
+
+[node name="CompleteStaticBg(288X208)" type="Sprite2D" parent="CompleteStaticBg(288X208)" unique_id=25006421]
+position = Vector2(343.13275, -0.10653305)
+scale = Vector2(1.3843039, 1.0012493)
+texture = ExtResource("1_o4l0v")
+
+[node name="CompleteStaticBg(288X208)" type="Sprite2D" parent="CompleteStaticBg(288X208)/CompleteStaticBg(288X208)" unique_id=1663417065]
+position = Vector2(-549.4973, 0.10640228)
+scale = Vector2(1.3843039, 1.0012493)
+texture = ExtResource("1_o4l0v")
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=203274931]
+position = Vector2(121.00001, 71)
+scale = Vector2(0.16991423, 0.16991423)
+texture = ExtResource("2_xmscy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=539849912]
+position = Vector2(272, 155)
+scale = Vector2(0.46003225, 0.46003225)
+sprite_frames = SubResource("SpriteFrames_u6864")
+autoplay = "default"
+frame_progress = 0.77005607
+offset = Vector2(-0.545, 0)
+flip_h = true
+
+[node name="Button" type="Button" parent="." unique_id=1010693410]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 133.0
+offset_right = 178.0
+offset_bottom = 164.0
+text = "Iniciar"
+icon = ExtResource("4_u4na4")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cqwktsgtobyuj"]
+
+[ext_resource type="Script" uid="uid://bjb186bkeuvja" path="res://fallarea.gd" id="1_eq1xw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6864"]
+size = Vector2(2585.5, 0.97444725)
+
+[node name="fallarea" type="Node2D" unique_id=2118209416]
+script = ExtResource("1_eq1xw")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=994868868]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=735694115]
+position = Vector2(-1105, 1213)
+scale = Vector2(39.51279, -3174.099)
+shape = SubResource("RectangleShape2D_u6864")
+debug_color = Color(0.8758901, 0.34439656, 0, 0.41960785)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,0 +1,374 @@
+[gd_scene format=4 uid="uid://col8rpuyud3tv"]
+
+[ext_resource type="Script" uid="uid://jl615ikuhkrv" path="res://animation_dialog_final.gd" id="1_84vfk"]
+[ext_resource type="Script" uid="uid://dan7pn8xecqt6" path="res://final_dialog.gd" id="1_i2ghe"]
+[ext_resource type="Texture2D" uid="uid://c3ajvf2ylpr54" path="res://tiles/2 - Autumn Forest/Background parts/6 - Distant_trees.png" id="2_we6u7"]
+[ext_resource type="Texture2D" uid="uid://1o01kmcxjtpb" path="res://tiles/2 - Autumn Forest/Background parts/5 - Tree_row_BG_2.png" id="3_8qkp0"]
+[ext_resource type="Texture2D" uid="uid://c3qqyh753cdco" path="res://tiles/2 - Autumn Forest/Background parts/4 - Tree_row_BG_1.png" id="4_goiwk"]
+[ext_resource type="Texture2D" uid="uid://c8ldsjrux1mod" path="res://tiles/2 - Autumn Forest/Background parts/3 - Bottom_leaf_piles.png" id="5_ccljk"]
+[ext_resource type="Texture2D" uid="uid://bopyq6egrmknh" path="res://tiles/2 - Autumn Forest/Background parts/2 - Trees.png" id="6_w5jmg"]
+[ext_resource type="Texture2D" uid="uid://ddo2enba111wl" path="res://tiles/2 - Autumn Forest/Background parts/1 - Leaf_top.png" id="7_4ax4c"]
+[ext_resource type="TileSet" uid="uid://cni1s1p722dej" path="res://terrain.tres" id="8_v7yl4"]
+[ext_resource type="PackedScene" uid="uid://dxyq3e070gcmo" path="res://camera_2d.tscn" id="9_lbhg7"]
+[ext_resource type="TileSet" uid="uid://dreyv0k2ls33i" path="res://decoration.tres" id="10_f5lvn"]
+[ext_resource type="PackedScene" uid="uid://dhkjko1w0wlnv" path="res://biel.tscn" id="11_06bun"]
+[ext_resource type="Script" uid="uid://c455lp3edv64j" path="res://label.gd" id="14_i2ghe"]
+[ext_resource type="PackedScene" uid="uid://dmbx5ss6dwx7u" path="res://player_cutscene.tscn" id="14_kfx0m"]
+
+[sub_resource type="Animation" id="Animation_qg8kn"]
+length = 9.466666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerCutscene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-18, 182)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerCutscene:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationDialogFinal/TileMapLayer2:enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationDialogFinal/biel:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(519, 152)]
+}
+
+[sub_resource type="Animation" id="Animation_2u8sv"]
+resource_name = "cutscene"
+length = 19.166666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerCutscene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8.04),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-20, 183), Vector2(438, 183)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerCutscene")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(8.166667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"player_stop"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationDialogFinal")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(10.733334),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"load_next_scene"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_i2ghe"]
+resource_name = "final-dialog"
+length = 10.633333
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerCutscene")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3.4333334),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"player_stop"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerCutscene:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2666667, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(400, 184), Vector2(510, 150), Vector2(465, 184)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayerCutscene:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7527128, 1.6, 2.6, 3.0929654),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.3229595, 0.0, -2.8117254, -6.2831855]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationDialogFinal/TileMapLayer2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationDialogFinal/TileMapLayer2:enabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.3333334, 1.5601684),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationDialogFinal/biel")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.8, 10.033334),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"start_jump"
+}, {
+"args": [],
+"method": &"load_next_scene"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationDialogFinal/biel:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2.1666667, 2.8333333, 3.6, 4.5, 5.133333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(519, 152), Vector2(519.19, 162.016), Vector2(519, 184.69), Vector2(519, 184.69), Vector2(481.9, 184.28)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(5.6666665),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show_label"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Label2")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(6.5666666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show_label"
+}]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Label3")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(7.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"show_label"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1ya1f"]
+_data = {
+&"RESET": SubResource("Animation_qg8kn"),
+&"cutscene": SubResource("Animation_2u8sv"),
+&"final-dialog": SubResource("Animation_i2ghe")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_we6u7"]
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[node name="FinalDialog" type="Node2D" unique_id=743610062]
+script = ExtResource("1_i2ghe")
+
+[node name="AnimationDialogFinal" type="AnimationPlayer" parent="." unique_id=1538839368]
+libraries/ = SubResource("AnimationLibrary_1ya1f")
+script = ExtResource("1_84vfk")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="AnimationDialogFinal" unique_id=992002064]
+
+[node name="06" type="ParallaxLayer" parent="AnimationDialogFinal/ParallaxBackground" unique_id=487739692]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimationDialogFinal/ParallaxBackground/06" unique_id=768498643]
+position = Vector2(144, 104)
+texture = ExtResource("2_we6u7")
+
+[node name="05" type="ParallaxLayer" parent="AnimationDialogFinal/ParallaxBackground" unique_id=1453743927]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimationDialogFinal/ParallaxBackground/05" unique_id=79145330]
+position = Vector2(144, 104)
+texture = ExtResource("3_8qkp0")
+
+[node name="04" type="ParallaxLayer" parent="AnimationDialogFinal/ParallaxBackground" unique_id=1619886406]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimationDialogFinal/ParallaxBackground/04" unique_id=1421745413]
+position = Vector2(144, 104)
+texture = ExtResource("4_goiwk")
+
+[node name="03" type="ParallaxLayer" parent="AnimationDialogFinal/ParallaxBackground" unique_id=374231052]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimationDialogFinal/ParallaxBackground/03" unique_id=167431882]
+position = Vector2(144, 104)
+texture = ExtResource("5_ccljk")
+
+[node name="02" type="ParallaxLayer" parent="AnimationDialogFinal/ParallaxBackground" unique_id=698238291]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimationDialogFinal/ParallaxBackground/02" unique_id=499009941]
+position = Vector2(144, 104)
+texture = ExtResource("6_w5jmg")
+
+[node name="07" type="ParallaxLayer" parent="AnimationDialogFinal/ParallaxBackground" unique_id=1582785495]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimationDialogFinal/ParallaxBackground/07" unique_id=1410699987]
+position = Vector2(144, 104)
+texture = ExtResource("7_4ax4c")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="AnimationDialogFinal" unique_id=1934867883]
+tile_map_data = PackedByteArray("AAAAAAwAAgACAAMAAAABAAwAAgACAAMAAAACAAwAAgACAAMAAAADAAwAAgACAAMAAAAEAAwAAgACAAMAAAAFAAwAAgACAAMAAAAGAAwAAgACAAMAAAAHAAwAAgACAAMAAAAIAAwAAgACAAMAAAAJAAwAAgACAAMAAAAKAAwAAgACAAMAAAALAAwAAgACAAMAAAAMAAwAAgACAAMAAAANAAwAAgACAAMAAAAOAAwAAgACAAMAAAAPAAwAAgACAAMAAAAQAAwAAgACAAMAAAARAAwAAgACAAMAAAASAAwAAgACAAMAAAATAAwAAgACAAMAAAAUAAwAAgACAAMAAAAVAAwAAgACAAMAAAAWAAwAAgACAAMAAAAXAAwAAgACAAMAAAAYAAwAAgACAAMAAAAZAAwAAgACAAMAAAAaAAwAAgACAAMAAAAbAAwAAgACAAMAAAAcAAwAAgACAAMAAAAdAAwAAgACAAMAAAAeAAwAAgACAAMAAAAfAAwAAgACAAMAAAAgAAwAAgACAAMAAAAhAAwAAgACAAMAAAAiAAwAAgACAAMAAAAjAAwAAgACAAMAAAAgAAoAAgAEAAEAAAAgAAsAAgAEAAIAAAD6/woAAQADAAEAAAD6/wsAAQADAAIAAAD7/woAAQAEAAEAAAD7/wsAAQAEAAUAAAD8/woAAQAFAAEAAAD8/wsAAQAFAAIAAAAeAAoAAgADAAEAAAAeAAsAAgADAAIAAAAiAAoAAgAFAAEAAAAiAAsAAgAFAAIAAAAfAAoAAgAEAAEAAAAfAAsAAgAEAAIAAAAhAAoAAgAEAAEAAAAhAAsAAgAEAAIAAAAAAA0AAgAEAAMAAAAAAA4AAgAEAAQAAAAAAA8AAgAEAAMAAAAAABAAAgAEAAQAAAABAA0AAgAEAAMAAAABAA4AAgAEAAQAAAABAA8AAgAEAAMAAAABABAAAgAEAAQAAAACAA0AAgAEAAMAAAACAA4AAgAEAAQAAAACAA8AAgAEAAMAAAACABAAAgAEAAQAAAADAA0AAgAEAAMAAAADAA4AAgAEAAQAAAADAA8AAgAEAAMAAAADABAAAgAEAAQAAAAEAA0AAgAEAAMAAAAEAA4AAgAEAAQAAAAEAA8AAgAEAAMAAAAEABAAAgAEAAQAAAAFAA0AAgAEAAMAAAAFAA4AAgAEAAQAAAAFAA8AAgAEAAMAAAAFABAAAgAEAAQAAAAGAA0AAgAEAAMAAAAGAA4AAgAEAAQAAAAGAA8AAgAEAAMAAAAGABAAAgAEAAQAAAAHAA0AAgAEAAMAAAAHAA4AAgAEAAQAAAAHAA8AAgAEAAMAAAAHABAAAgAEAAQAAAAIAA0AAgAEAAMAAAAIAA4AAgAEAAQAAAAIAA8AAgAEAAMAAAAIABAAAgAEAAQAAAAJAA0AAgAEAAMAAAAJAA4AAgAEAAQAAAAJAA8AAgAEAAMAAAAJABAAAgAEAAQAAAAKAA0AAgAEAAMAAAAKAA4AAgAEAAQAAAAKAA8AAgAEAAMAAAAKABAAAgAEAAQAAAALAA0AAgAEAAMAAAALAA4AAgAEAAQAAAALAA8AAgAEAAMAAAALABAAAgAEAAQAAAAMAA0AAgAEAAMAAAAMAA4AAgAEAAQAAAAMAA8AAgAEAAMAAAAMABAAAgAEAAQAAAANAA0AAgAEAAMAAAANAA4AAgAEAAQAAAANAA8AAgAEAAMAAAANABAAAgAEAAQAAAAOAA0AAgAEAAMAAAAOAA4AAgAEAAQAAAAOAA8AAgAEAAMAAAAOABAAAgAEAAQAAAAPAA0AAgAEAAMAAAAPAA4AAgAEAAQAAAAPAA8AAgAEAAMAAAAPABAAAgAEAAQAAAAQAA0AAgAEAAMAAAAQAA4AAgAEAAQAAAAQAA8AAgAEAAMAAAAQABAAAgAEAAQAAAARAA0AAgAEAAMAAAARAA4AAgAEAAQAAAARAA8AAgAEAAMAAAARABAAAgAEAAQAAAASAA0AAgAEAAMAAAASAA4AAgAEAAQAAAASAA8AAgAEAAMAAAASABAAAgAEAAQAAAATAA0AAgAEAAMAAAATAA4AAgAEAAQAAAATAA8AAgAEAAMAAAATABAAAgAEAAQAAAAUAA0AAgAEAAMAAAAUAA4AAgAEAAQAAAAUAA8AAgAEAAMAAAAUABAAAgAEAAQAAAAVAA0AAgAEAAMAAAAVAA4AAgAEAAQAAAAVAA8AAgAEAAMAAAAVABAAAgAEAAQAAAAWAA0AAgAEAAMAAAAWAA4AAgAEAAQAAAAWAA8AAgAEAAMAAAAWABAAAgAEAAQAAAAXAA0AAgAEAAMAAAAXAA4AAgAEAAQAAAAXAA8AAgAEAAMAAAAXABAAAgAEAAQAAAAYAA0AAgAEAAMAAAAYAA4AAgAEAAQAAAAYAA8AAgAEAAMAAAAYABAAAgAEAAQAAAAZAA0AAgAEAAMAAAAZAA4AAgAEAAQAAAAZAA8AAgAEAAMAAAAZABAAAgAEAAQAAAAaAA0AAgAEAAMAAAAaAA4AAgAEAAQAAAAaAA8AAgAEAAMAAAAaABAAAgAEAAQAAAAbAA0AAgAEAAMAAAAbAA4AAgAEAAQAAAAbAA8AAgAEAAMAAAAbABAAAgAEAAQAAAAcAA0AAgAEAAMAAAAcAA4AAgAEAAQAAAAcAA8AAgAEAAMAAAAcABAAAgAEAAQAAAAdAA0AAgAEAAMAAAAdAA4AAgAEAAQAAAAdAA8AAgAEAAMAAAAdABAAAgAEAAQAAAAeAA0AAgAEAAMAAAAeAA4AAgAEAAQAAAAeAA8AAgAEAAMAAAAeABAAAgAEAAQAAAAfAA0AAgAEAAMAAAAfAA4AAgAEAAQAAAAfAA8AAgAEAAMAAAAfABAAAgAEAAQAAAAgAA0AAgAEAAMAAAAgAA4AAgAEAAQAAAAgAA8AAgAEAAMAAAAgABAAAgAEAAQAAAAhAA0AAgAEAAMAAAAhAA4AAgAEAAQAAAAhAA8AAgAEAAMAAAAhABAAAgAEAAQAAAAiAA0AAgAEAAMAAAAiAA4AAgAEAAQAAAAiAA8AAgAEAAMAAAAiABAAAgAEAAQAAAAjAA0AAgAEAAMAAAAjAA4AAgAEAAQAAAAjAA8AAgAEAAMAAAAjABAAAgAEAAQAAAA=")
+tile_set = ExtResource("8_v7yl4")
+
+[node name="Camera2D" parent="AnimationDialogFinal" unique_id=393279075 instance=ExtResource("9_lbhg7")]
+limit_top = 0
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="AnimationDialogFinal" unique_id=1678683376]
+tile_map_data = PackedByteArray("AAD//wkABQABAAEAAAD//woABQABAAIAAAD//wsABQABAAMAAAAAAAkABQACAAEAAAAAAAoABQACAAIAAAAAAAsABQACAAMAAAABAAkABQADAAEAAAABAAoABQADAAIAAAABAAsABQADAAMAAAAGAAkABQACAAEAAAAeAAgABQAOAAMAAAAeAAkABQAOAAQAAAAfAAgABQAQAAMAAAAgAAgABQAQAAMAAAAgAAkABQAQAAQAAAAhAAgABQAQAAMAAAAiAAgABQASAAMAAAAiAAkABQASAAQAAAAfAAkABQAQAAQAAAAhAAkABQAQAAQAAAANAAkABQABAAEAAAANAAoABQABAAIAAAANAAsABQABAAMAAAAOAAkABQACAAEAAAAOAAoABQACAAIAAAAOAAsABQACAAMAAAAPAAkABQADAAEAAAAPAAoABQADAAIAAAAPAAsABQADAAMAAAAFAAkABQABAAEAAAAFAAoABQABAAIAAAAFAAsABQABAAMAAAAGAAoABQACAAIAAAAGAAsABQACAAMAAAAHAAkABQADAAEAAAAHAAoABQADAAIAAAAHAAsABQADAAMAAAARAAkABQABAAEAAAARAAoABQABAAIAAAARAAsABQABAAMAAAASAAkABQACAAEAAAASAAoABQACAAIAAAASAAsABQACAAMAAAATAAkABQADAAEAAAATAAoABQADAAIAAAATAAsABQADAAMAAAAJAAkABQABAAEAAAAJAAoABQABAAIAAAAJAAsABQABAAMAAAAKAAkABQACAAEAAAAKAAoABQACAAIAAAAKAAsABQACAAMAAAALAAkABQADAAEAAAALAAoABQADAAIAAAALAAsABQADAAMAAAA=")
+tile_set = ExtResource("10_f5lvn")
+
+[node name="biel" parent="AnimationDialogFinal" unique_id=1348196658 instance=ExtResource("11_06bun")]
+position = Vector2(519, 152)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AnimationDialogFinal" unique_id=1643711444]
+
+[node name="PlayerCutscene" parent="." unique_id=1766849152 instance=ExtResource("14_kfx0m")]
+z_index = 10
+position = Vector2(-18, 182)
+
+[node name="Label3" type="Label" parent="." unique_id=1259941130]
+z_index = 2
+offset_left = 471.0
+offset_top = 161.00002
+offset_right = 612.0
+offset_bottom = 184.00002
+scale = Vector2(0.46735674, 0.46735674)
+text = "Feliz 05 meses"
+label_settings = SubResource("LabelSettings_we6u7")
+script = ExtResource("14_i2ghe")
+labelDinamic = "Feliz 05 meses"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="." unique_id=1341825378]
+z_index = 2
+offset_left = 471.0
+offset_top = 150.00002
+offset_right = 612.0
+offset_bottom = 173.00002
+scale = Vector2(0.46735674, 0.46735674)
+text = "Te amo meu amor"
+label_settings = SubResource("LabelSettings_we6u7")
+script = ExtResource("14_i2ghe")
+labelDinamic = "Te amo meu amor"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=591704496]
+offset_left = 471.0
+offset_top = 139.0
+offset_right = 590.0
+offset_bottom = 162.0
+scale = Vector2(0.46735674, 0.46735674)
+text = "Muito obrigado"
+label_settings = SubResource("LabelSettings_we6u7")
+script = ExtResource("14_i2ghe")
+labelDinamic = "Muito obrigado Milay"
+metadata/_edit_use_anchors_ = true

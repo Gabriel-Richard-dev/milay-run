@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://dndfk25w3m34s"]
+
+[ext_resource type="Script" uid="uid://d358x5jwyhrvh" path="res://skeleton.gd" id="1_plk42"]
+[ext_resource type="Texture2D" uid="uid://d281mvbkvkdee" path="res://sprites/3 - Skeleton/Crumbling_Into_Bone_Pile (32 x 32).png" id="2_r6xse"]
+[ext_resource type="Texture2D" uid="uid://bt4fduhdsfq5" path="res://sprites/3 - Skeleton/Limping_Movement (32 x 32).png" id="3_sv33q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4ejc"]
+size = Vector2(27, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uaaco"]
+atlas = ExtResource("2_r6xse")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymvsc"]
+atlas = ExtResource("2_r6xse")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwpf0"]
+atlas = ExtResource("2_r6xse")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ew5mc"]
+atlas = ExtResource("2_r6xse")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqc8v"]
+atlas = ExtResource("2_r6xse")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft6oh"]
+atlas = ExtResource("2_r6xse")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6jny"]
+atlas = ExtResource("2_r6xse")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8jiy"]
+atlas = ExtResource("3_sv33q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh88d"]
+atlas = ExtResource("3_sv33q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d56fl"]
+atlas = ExtResource("3_sv33q")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obgqe"]
+atlas = ExtResource("3_sv33q")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyp1f"]
+atlas = ExtResource("3_sv33q")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ixog"]
+atlas = ExtResource("3_sv33q")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_55awj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uaaco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymvsc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwpf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ew5mc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqc8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ft6oh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6jny")
+}],
+"loop": 0,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8jiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sh88d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d56fl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obgqe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyp1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ixog")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
+size = Vector2(17, 28)
+
+[node name="Skeleton" type="CharacterBody2D" unique_id=1888127161 groups=["enemie"]]
+collision_layer = 4
+script = ExtResource("1_plk42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1384816008]
+visible = false
+position = Vector2(-1.5, -0.5)
+shape = SubResource("RectangleShape2D_s4ejc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1982582255]
+position = Vector2(-1, -2)
+sprite_frames = SubResource("SpriteFrames_55awj")
+animation = &"dead"
+autoplay = "walk"
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1774062575]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1315870772]
+visible = false
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_i3pqv")
+debug_color = Color(0.99617094, 0.057918377, 3.85046e-07, 0.41960785)
+
+[node name="walldetector" type="RayCast2D" parent="." unique_id=1348921006]
+visible = false
+position = Vector2(-2, 9)
+target_position = Vector2(22, 0)
+
+[node name="grounddetector" type="RayCast2D" parent="." unique_id=2121810761]
+visible = false
+position = Vector2(13, -4)
+target_position = Vector2(0, 25)

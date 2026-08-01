@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://boklyqwd6e7mq"]
+
+[ext_resource type="Script" uid="uid://csinyb6k2uajp" path="res://the_end.gd" id="1_08u7m"]
+[ext_resource type="Texture2D" uid="uid://d3e6tlgs36737" path="res://tiles/1 - Grassland/Background parts/bixinhos (2).png" id="2_6rnfd"]
+[ext_resource type="Texture2D" uid="uid://bfma6nfryxhsq" path="res://pixel-curve-road-in-night-hilly-desert-background-wnding-synthwave-highway-8bit-neon-valley-with-starry-sky-with-purple-road-and-hills-vector.jpg" id="2_keutu"]
+[ext_resource type="Texture2D" uid="uid://cuwxowl1okeot" path="res://bielandando.png" id="3_6rnfd"]
+[ext_resource type="Texture2D" uid="uid://d0pm6suoaavnm" path="res://player/1 - Penguin/Waddling (16 x 16).png" id="3_7hgbx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_keutu"]
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfq8t"]
+atlas = ExtResource("3_7hgbx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyjox"]
+atlas = ExtResource("3_7hgbx")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1oer6"]
+atlas = ExtResource("3_7hgbx")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36ld4"]
+atlas = ExtResource("3_7hgbx")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itrkl"]
+atlas = ExtResource("3_7hgbx")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdpu1"]
+atlas = ExtResource("3_7hgbx")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u6864"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfq8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cyjox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1oer6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36ld4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itrkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdpu1")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hgbx"]
+atlas = ExtResource("3_6rnfd")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08u7m"]
+atlas = ExtResource("3_6rnfd")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bp1n7"]
+atlas = ExtResource("3_6rnfd")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t43du"]
+atlas = ExtResource("3_6rnfd")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51rdc"]
+atlas = ExtResource("3_6rnfd")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_my7nd"]
+atlas = ExtResource("3_6rnfd")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6n65h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hgbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08u7m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bp1n7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t43du")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51rdc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_my7nd")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Final" type="Control" unique_id=651468982]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_08u7m")
+
+[node name="Bixinhos(2)" type="Sprite2D" parent="." unique_id=943853171]
+position = Vector2(187, 156)
+scale = Vector2(0.19735743, 0.19735743)
+texture = ExtResource("2_6rnfd")
+
+[node name="Label" type="Label" parent="." unique_id=2109007919]
+layout_mode = 0
+offset_left = 28.999996
+offset_top = 20.999996
+offset_right = 201.0
+offset_bottom = 43.999996
+scale = Vector2(1.1382722, 1.1382722)
+text = "Te amo"
+label_settings = SubResource("LabelSettings_keutu")
+
+[node name="Label" type="Label" parent="Label" unique_id=1483118526]
+layout_mode = 0
+offset_top = 19.327541
+offset_right = 172.00002
+offset_bottom = 42.32754
+scale = Vector2(0.6182724, 0.6182724)
+text = "Feliz 05 meses!"
+label_settings = SubResource("LabelSettings_keutu")
+
+[node name="Label" type="Label" parent="Label/Label" unique_id=1619365137]
+layout_mode = 0
+offset_left = 2.8418741
+offset_top = 31.260555
+offset_right = 520.84186
+offset_bottom = 132.26056
+scale = Vector2(0.52439874, 0.5138464)
+text = "De coração obrigado por tudo e por tanto, você é a melhor pessoa. 
+Deus te abençoe grandemente, isso aqui
+ foi apenas uma homenagem, 
+afinal a gente ama jogos. "
+label_settings = SubResource("LabelSettings_keutu")
+
+[node name="PixelCurveRoadInNightHillyDesertBackgroundWndingSynthwaveHighway8BitNeonValleyWithStarrySkyWithPurpleRoadAndHillsVector2" type="Sprite2D" parent="." unique_id=63209991]
+z_index = -4
+position = Vector2(194.06667, 168.1)
+scale = Vector2(0.13444445, 0.13444445)
+texture = ExtResource("2_keutu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PixelCurveRoadInNightHillyDesertBackgroundWndingSynthwaveHighway8BitNeonValleyWithStarrySkyWithPurpleRoadAndHillsVector2" unique_id=1714595652]
+z_index = 5
+position = Vector2(-781.48755, -231.32233)
+scale = Vector2(16.43747, 16.43747)
+sprite_frames = SubResource("SpriteFrames_u6864")
+autoplay = "default"
+frame_progress = 0.4511741
+
+[node name="PixelCurveRoadInNightHillyDesertBackgroundWndingSynthwaveHighway8BitNeonValleyWithStarrySkyWithPurpleRoadAndHillsVector" type="Sprite2D" parent="." unique_id=730938115]
+z_index = -4
+position = Vector2(142, 123)
+scale = Vector2(0.36666667, 0.36666667)
+texture = ExtResource("2_keutu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PixelCurveRoadInNightHillyDesertBackgroundWndingSynthwaveHighway8BitNeonValleyWithStarrySkyWithPurpleRoadAndHillsVector" unique_id=1101363244]
+z_index = 3
+position = Vector2(-253.63635, 35.45456)
+scale = Vector2(5.9121175, 5.9121175)
+sprite_frames = SubResource("SpriteFrames_6n65h")
+autoplay = "default"
+
+[node name="Button" type="Button" parent="." unique_id=1241195745]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 165.0
+offset_right = 161.0
+offset_bottom = 196.0
+scale = Vector2(0.68, 0.68)
+text = "Jogar novamente"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

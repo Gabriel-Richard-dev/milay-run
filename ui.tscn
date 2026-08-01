@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://c2x4ubmelq50m"]
+
+[ext_resource type="Script" uid="uid://c8h44tv3n4wkn" path="res://ui.gd" id="1_27fn8"]
+[ext_resource type="Texture2D" uid="uid://crbjhpng1drjp" path="res://player/1 - Penguin/Mini FX, Items & UI/Common Pick-ups/Coin (16 x 16).png" id="1_tsooq"]
+[ext_resource type="Texture2D" uid="uid://xhlj2vrqiomk" path="res://items/Common Pick-ups/Heart_Spin (16 x 16).png" id="3_27fn8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_665jj"]
+atlas = ExtResource("1_tsooq")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88f8t"]
+atlas = ExtResource("1_tsooq")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhvp1"]
+atlas = ExtResource("1_tsooq")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kywx8"]
+atlas = ExtResource("1_tsooq")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u6864"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_665jj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88f8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhvp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kywx8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nltto"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(32, 7, 16, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibotj"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(0, 7, 16, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5ude"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(16, 7, 16, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4yjw"]
+atlas = ExtResource("3_27fn8")
+region = Rect2(48, 7, 16, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_55awj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nltto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibotj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5ude")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4yjw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Ui" type="Control" unique_id=40578458]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -88.0
+offset_bottom = 26.0
+grow_horizontal = 0
+script = ExtResource("1_27fn8")
+
+[node name="labelCoins" type="Label" parent="." unique_id=1816052587]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 1.0
+offset_right = 83.0
+offset_bottom = 24.0
+text = "0"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=537601865]
+position = Vector2(67, 13)
+sprite_frames = SubResource("SpriteFrames_u6864")
+autoplay = "default"
+frame_progress = 0.36838794
+
+[node name="labelLife" type="Label" parent="." unique_id=1034427059]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 44.0
+offset_bottom = 24.0
+text = "0"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1434975883]
+position = Vector2(27, 11)
+scale = Vector2(2.105, 2.105)
+sprite_frames = SubResource("SpriteFrames_55awj")
+autoplay = "default"
+frame_progress = 0.98594475
+
+[connection signal="focus_exited" from="labelCoins" to="." method="_on_label_focus_exited"]

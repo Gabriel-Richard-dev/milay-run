@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bgqy8cb0jyh7k"]
+
+[ext_resource type="Script" uid="uid://k0iuyut22hoc" path="res://coin.gd" id="1_0t63x"]
+[ext_resource type="Texture2D" uid="uid://crbjhpng1drjp" path="res://player/1 - Penguin/Mini FX, Items & UI/Common Pick-ups/Coin (16 x 16).png" id="2_v7riw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6864"]
+size = Vector2(16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdq0q"]
+atlas = ExtResource("2_v7riw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w14il"]
+atlas = ExtResource("2_v7riw")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4etq"]
+atlas = ExtResource("2_v7riw")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4fra"]
+atlas = ExtResource("2_v7riw")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u6864"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdq0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w14il")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4etq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4fra")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Coin" type="Node2D" unique_id=158941746]
+script = ExtResource("1_0t63x")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1062581438]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1489622647]
+shape = SubResource("RectangleShape2D_u6864")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=426448153]
+sprite_frames = SubResource("SpriteFrames_u6864")
+autoplay = "default"
+frame_progress = 0.75967765
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
